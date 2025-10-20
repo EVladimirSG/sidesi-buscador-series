@@ -7,7 +7,7 @@ from time import sleep
 # =========================================================
 # ⚙️ CONFIGURACIÓN GENERAL
 # =========================================================
-st.set_page_config(page_title="SISTEMA DE BUSCAR SERIES, VS", page_icon="📘", layout="centered")
+st.set_page_config(page_title="SISTEMA DE BUSCAR SERIES VS", page_icon="📘", layout="centered")
 
 st.title("📘 **BUSCADOR DE SERIES PARA DESCARGO DE MATERIALES**")
 st.write("""
@@ -149,6 +149,7 @@ try:
 
 except Exception as e:
     st.error(f"🚨Error durante el procesamiento: {e}")
+
 
 
 
