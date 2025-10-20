@@ -10,7 +10,6 @@ from time import sleep
 st.set_page_config(page_title="SISTEMA DE BUSCAR SERIES, VS", page_icon="📘", layout="centered")
 
 st.title("📘 **BUSCADOR DE SERIES PARA DESCARGO DE MATERIALES**")
-st.caption("Version actualizado")
 st.write("""
 Esta herramienta es para busca las series instaladas en los centro de cierre de cada mes
          en mantenimiento DTH PROINTEL, o garantias.
@@ -150,6 +149,7 @@ try:
 
 except Exception as e:
     st.error(f"🚨Error durante el procesamiento: {e}")
+
 
 
 
