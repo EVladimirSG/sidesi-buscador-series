@@ -39,9 +39,9 @@ try:
     df_cierres.columns = df_cierres.columns.str.strip().str.upper()
 
     # Mostrar vista previa
-    with st.expander("👀 Vista previa del archivo de SERIES/EXISTENCIAS"):
+    with st.expander("Vista previa del archivo de SERIES/EXISTENCIAS"):
         st.dataframe(df_series.head(5), use_container_width=True)
-    with st.expander("👀 Vista previa del archivo de CIERRES"):
+    with st.expander("Vista previa del archivo de CIERRES"):
         st.dataframe(df_cierres.head(5), use_container_width=True)
 
     # Buscar columnas que contengan "SERIE"
@@ -82,7 +82,7 @@ try:
         progreso.progress(int(((i + 1) / total_series) * 100))
 
     # =========================================================
-    # 📊 RESULTADOS
+    # RESULTADOS
     # =========================================================
     st.success("Búsqueda completada con éxito.")
     st.write(f"**Series encontradas:** {len(coincidencias)}")
@@ -134,7 +134,7 @@ try:
                 writer.sheets["Coincidencias"].set_column(col_num, col_num, ancho)
 
         st.download_button(
-            label="💾 Descargar resultados en Excel",
+            label="Descargar resultados en Excel",
             data=buffer.getvalue(),
             file_name=nombre_archivo,
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
@@ -150,6 +150,7 @@ try:
 
 except Exception as e:
     st.error(f"🚨Error durante el procesamiento: {e}")
+
 
 
 
